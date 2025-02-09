@@ -1,0 +1,19 @@
+/*
+Name: Peter Nguyen
+    File: homework1.html
+    Date Created: January 28, 2025
+    Date Updated: 2/8/2025 8:10 PM
+    Version: 1.0
+    Purpose: MIS 3371 Web Development Project HW 1 ... Patient Registration Form 😊
+    */
+    body
+    {
+        background-color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .center-main-header /* Line 29-30 */
+    {
+        text-align: center;
+    }
