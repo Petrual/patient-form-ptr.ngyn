@@ -1,8 +1,8 @@
 /*
 Name: Peter Nguyen
-    File: homework1.html
+    File: hw1.js
     Date Created: January 28, 2025
-    Date Updated: 2/8/2025 8:10 PM
+    Date Updated: 2/9/2025 2:26 AM
     Version: 1.0
     Purpose: MIS 3371 Web Development Project HW 1 ... Patient Registration Form 😊
 */
