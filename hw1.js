@@ -1,7 +1,7 @@
 /*
 Name: Peter Nguyen
 
-    File: hw1.css
+    File: hw1.js
     Date Created: January 28, 2025
     Date Updated: 2/9/2025 2:26 AM
     Version: 1.0
