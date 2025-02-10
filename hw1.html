@@ -24,7 +24,7 @@
                         width="150px"/>
                 </div>
             <td>
-                <h2>    Height's Top Medical Location</h2>
+                <h2>Height's Top Medical Location</h2>
             </td>
             <td valign="bottom" halign="right" width="20%">
                 <p> Today's Date: <span id="today"></span></p>
@@ -77,13 +77,12 @@
                 <tr> <!-- Date of Birth-->
                     <td class="align-right"><label for="dob">Date of Birth:</label></td>
                     <td>
-                        <input
-                            type="date"
+                        <input type="date"
                             id="dob"
                             name="dob"
                             required>
                     </td>
-                <tr>
+                <tr> <!--Gender Radio Buttons-->
                         <td class="align-right"><label for="gender">Gender:</label></td>
                         <td required>
                             <input type="radio" id="g1" name="gender" value="Male"> Male
@@ -124,7 +123,20 @@
                             placeholder="Optional">
                     </td>
                 </tr>
-                <tr class="address-row"> <!--City, State, Zipcode-->
+                <tr> <!-- Phone Number-->
+                    <td class="align-right"><label for="phone">Phone Number:</label></td>
+                    <td>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            placeholder="XXX-XXX-XXXX"
+                            maxlength="12"
+                            required>
+                    </td>
+                </tr>
+                <tr class="address-row"> <!--City-->
                     <td class="align-right"><label for="city">City:</label></td>
                     <td>
                         <input
@@ -202,6 +214,7 @@
                             type="text"
                             id="zip"
                             name="zip"
+                            pattern="[0-9]{5}"
                             maxlength="5"
                             required>
                     </td>
@@ -213,6 +226,7 @@
                             type="text"
                             id="email"
                             name="email"
+                            maxlength="40"
                             placeholder="name@domain.com"
                             required>
                     </td>
@@ -224,6 +238,7 @@
                             type="range"
                             id="health"
                             name="health"
+                            default="0"
                             min="1"
                             max="10"
                             required>
@@ -251,6 +266,7 @@
                             name="symptoms"
                             rows="3"
                             cols="50"
+                            maxlength="400"
                             placeholder="If none type 'N/A'"
                             required></textarea>
                         </td>   
@@ -297,6 +313,7 @@
                             id="username"
                             name="username"
                             maxlength="30"
+                            pattern="[A-Za-z]+[A-Za-z0-9-_]{8,}"
                             placeholder="Do not use your real name"
                             required>
                     </td>
@@ -309,6 +326,7 @@
                             name="password"
                             minlength="12"
                             maxlength="30"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             placeholder="Must be at least 12 characters"
                             required>
                     </td>
