@@ -13,6 +13,10 @@ Name: Peter Nguyen
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
     table
         {
@@ -57,4 +61,17 @@ Name: Peter Nguyen
             border: 2px solid #000000; 
             border-radius: 5px; 
             display: inline-block;
+        }
+        .thankyou
+        {
+            text-align: center;
+            background-color: #AAF0C1;
+            padding: 20px;
+            border: 2px solid #000000;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
         }
