@@ -8,20 +8,20 @@ Name: Peter Nguyen
     Purpose: MIS 3371 Web Development Project HW 2.. Patient Registration Form 😊
     */
 
-header {
+header { /* adjust the header section */
     width: 100%;
     background-color: #ccd5ae;
 
 }
 
-.title-header {
+.title-header { /* styling for "Height's Top Medical Location" title */
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
 }
 
-body{
+body{ /* styling for full body section of page */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,37 +35,37 @@ form{
     flex-grow: 1;
 }
 
-h1, h2 {
+h1, h2 { /* styling for h1 and h2 */
     text-align: center;
     font-family:"Copperplate", "Copperplate Gothic Light", fantasy;
     font-weight: bolder;
     flex-grow: 1;
 }
 
-main{
+main{ /* styling for main section */
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
     flex-grow: 1;
 }
 
-.image {
+.image { /* styling for image */
     text-align: left;
 }
 
-.td1 {
+.td1 { /* styling for class td1 data */
     text-align: right;
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
 }
 
-th {
+th { /* styling for table header */
     text-align: center;
     font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
     font-weight: bolder;
 }
 
-footer {
+footer { /* styling for footer section */
     position: flex;
     bottom: 0;
     width: 100%;

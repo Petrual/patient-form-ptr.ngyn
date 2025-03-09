@@ -56,8 +56,13 @@
                         name="fname"
                         maxlength="30"
                         required
-                        title="Please enter your first name"
+                        title="Only Letters A-Z, dashes, and apostrophes are allowed."
+                        pattern="[A-Za-z]{1,30}"
+                        onblur="validateFname()"
                         placeholder="John">
+
+                        <br>
+                        <span class="error" id="fname_error"></span>
                     </td>
                 </tr>
 
@@ -69,8 +74,13 @@
                         id="mini"
                         name="mini"
                         maxlength="1"
-                        title="Please enter your middle initial"
+                        title="Letters A-Z only."
+                        pattern="[A-Za-z]{0,1}"
+                        onblur="validateMini()"
                         placeholder="D">
+
+                        <br>
+                        <span class="error" id="mini_error"></span>
                     </td>
                 </tr>
 
@@ -82,9 +92,14 @@
                         id="lname"
                         name="lname"
                         maxlength="30"
-                        title="Please enter your last name"
+                        title="Only Letters A-Z, dashes, and apostrophes are allowed."
+                        pattern="[A-Za-z]{1,30}"
+                        onblur="validateLname()"
                         placeholder="Smith"
                         required>
+
+                        <br>
+                        <span class="error" id="lname_error"></span>
                     </td>
                 </tr>
                 
@@ -95,7 +110,11 @@
                             id="dob"
                             name="dob"
                             title="Please enter your date of birth."
+                            onblur="validateDob()"
                             required>
+
+                            <br>
+                        <span class="error" id="dob_error"></span>
                     </td>
                 </tr>
 
@@ -134,9 +153,13 @@
                         name="ssn"
                         minlength="11"
                         maxlength="11"
-                        title="Please enter your SSN."
+                        title="Numbers Only"
+                        onblur="validateSsn()"
                         placeholder="XXX-XX-XXXX"
                         required>
+
+                        <br>
+                        <span class="error" id="ssn_error"></span>
                     </td>
                 </tr>
                 <tr> <!--line divider-->
@@ -157,7 +180,11 @@
                         maxlength="30"
                         title="Please enter your primary address."
                         placeholder="1234 Main St."
+                        onblur="validateAddress1()"
                         required>
+
+                        <br>
+                        <span class="error" id="address1_error"></span>
                     </td>   
                 </tr>
 
@@ -171,7 +198,11 @@
                         minlength="1"
                         maxlength="30"
                         title="Please enter your address."
+                        onblur="validateAddress2()"
                         placeholder="Optional">
+
+                        <br>
+                        <span class="error" id="address2_error"></span>
                     </td>   
                 </tr>
 
@@ -268,8 +299,11 @@
                         name="zip"
                         pattern="[0-9]{5}"
                         maxlength="5"
-                        title="Please enter your zipcode."
+                        title="Numbers Only."
                         required>
+
+                        <br>
+                        <span class="error" id="zip_error"></span>
                     </td>
                 </tr>
 
@@ -283,7 +317,12 @@
                         maxlength="30"
                         title="Please enter your Email."
                         placeholder="user@domain.com"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
+                        onblur="validateEmail()" 
                         required>
+
+                        <br>
+                        <span class="error" id="email_error"></span>
                     </td>
                 </tr>
 
@@ -298,7 +337,11 @@
                         maxlength="12"
                         title="Please enter your phone number."
                         placeholder="XXX-XXX-XXXX"
+                        onblur="validatePhonenum()"
                         required>
+
+                        <br>
+                        <span class="error" id="phonenum_error"></span>
                     </td>
                 </tr>
 
@@ -379,14 +422,19 @@
                             type="text"
                             id="uname"
                             name="uname"
+                            minlength="5"
                             maxlength="15"
                             required
-                            title="Please enter a Username."
+                            title="Please enter a Username. Must contain at least 5 characters."
+                            onblur="validateUname()"
                             placeholder="User1234">
+
+                            <br>
+                            <span class="error" id="uname_error"></span>
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr> <!-- patient enters a password-->
                         <td class="td1"><label for="pword">Password:</label></td>
                         <td>
                             <input
@@ -396,12 +444,17 @@
                             minlength="10"
                             maxlength="30"
                             required
-                            title="Please enter a password."
+                            title="Password must contain at least 10 characters, including at least one number, one uppercase letter, one lowercase letter, and one special character."
+                            onblur="validatePword()"
+                            oninput="validatePword()"
+                            onfocus="validatePword()"
                             placeholder="Required">
+                            <br>
+                            <span class="error" id="pword_error"></span>
                         </td>
                     </tr>
 
-                    <tr>
+                    <tr> <!--Patient re-enters password-->
                         <td class="td1"><label for="con_pword">Password:</label></td>
                         <td>
                             <input
@@ -412,7 +465,12 @@
                             maxlength="30"
                             required
                             title="Please re-enter your password."
+                            onblur="validateConPword()"
+                            oninput="validateConPword()"
+                            onfocus="validateConPword()"
                             placeholder="Required">
+                            <br>
+                            <span class="error" id="con_pword_error"></span>
                         </td>
                     </tr>
 
@@ -421,6 +479,8 @@
                                 <input type="submit" id="submit" value="Submit">
 
                                 <input type="reset" id="reset" value="Reset">
+
+                                <input type="button" id="review" name="review" value="Review">
                         </td>
                     </tr>
             </table>
