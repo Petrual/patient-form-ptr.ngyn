@@ -11,6 +11,14 @@ Name: Peter Nguyen
 header {
     width: 100%;
     background-color: #ccd5ae;
+
+}
+
+.title-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 body{

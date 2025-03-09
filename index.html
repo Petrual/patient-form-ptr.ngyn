@@ -27,12 +27,12 @@
                         </div>
                     </td>
 
-                    <td> <!--Header-->
+                    <td class="title-header"> <!--Header-->
                         <h2>Height's Top Medical Location</h2>
                     </td>
                         <!--Displays today's Date-->
                     <td valign="botton" halign="right" width="20%">
-                        <p>Today's Date: <span id="today"></span></p>
+                        <p>Today's Date: <span id="today"   ></span></p>
                     </td>
                 </tr>
             </table>
@@ -91,14 +91,11 @@
                 <tr> <!--Patient enters DOB-->
                     <td class="td1"><label for="dob">Date of Birth:</label></td>
                     <td>
-                        <input
-                        type="text"
-                        id="dob"
-                        name="dob"
-                        maxlength="30"
-                        title="Please enter your Date of Birth"
-                        placeholder="MNM/DD/YYYY"
-                        required>
+                        <input type="date"
+                            id="dob"
+                            name="dob"
+                            title="Please enter your date of birth."
+                            required>
                     </td>
                 </tr>
 
