@@ -1,169 +1,220 @@
 <!DOCTYPE html>
 <!--
-    File: hw1.html
-    Date Created: January 28, 2025
-    Date Updated: 2/9/2025 2:26 AM
-    Version: 1.0
-    Purpose: MIS 3371 Web Development Project HW 1 ... Patient Registration Form 😊
+    File: index.html
+    Date Created: February 20, 2025
+    Date Updated: 3/7/2025 4:16 PM
+    Version: 1.1
+    Purpose: MIS 3371 Web Development Project HW 2 ... Patient Registration Form 😊
 -->
 <html lang="en">
+    <head>
+        <link rel="stylesheet" href="hw2.css"> <!--links to css file-->
 
-<head>
-    <link rel="stylesheet" href="hw1.css"> <!-- links to styling sheet-->
-    <title> Peter's Homework </title>
-</head>
-<header>
-    <table width="100%">
-        <tr>
-            <td valign="top" halign="left" width="20%">
-                <div class="image"> <!--image styler-->
-                    <img valign="center"
-                        src="hospital.png" 
-                        alt="Clinic Logo"
-                        height="150px"
-                        width="150px"/>
-                </div>
-            <td>
-                <h2>Height's Top Medical Location</h2>
-            </td>
-            <td valign="bottom" halign="right" width="20%">
-                <p> Today's Date: <span id="today"></span></p>
-            </td>
-            </td>
-        </tr>
-    </table>
-</header>
-<hr>
-<form action="thankyou.html">
-    <section>
-        <div>
-            <table class="general"> <!--Styling for general section-->
+    <!-- displays text in browser-->
+        <title>New Patient Registration Form | Height's Top Medical Location</title>
+    </head>
+    <body>
+        <header>
+            <table width="100%">
                 <tr>
-                    <th colspan="4" class="align-center">Create Account</th>
+                    <td valign ="top" halign="left" width="20%"> <!--Clinic Logo-->
+                        <div class="image">
+                            <img halign="center" 
+                            src="hospital.png" 
+                            alt="Height's Top Medical Location Logo" 
+                            width="160px" 
+                            id="logo">
+                        </div>
+                    </td>
+
+                    <td> <!--Header-->
+                        <h2>Height's Top Medical Location</h2>
+                    </td>
+                        <!--Displays today's Date-->
+                    <td valign="botton" halign="right" width="20%">
+                        <p>Today's Date: <span id="today"></span></p>
+                    </td>
                 </tr>
-                <tr> <!-- First Name-->
-                    <td class="align-right"><label for="fname">First Name:</label></td>
+            </table>
+        </header>
+<hr>
+<!--Form start point-->
+<form action="thankyou.html">
+        <div class="format">
+            <table>
+                <tr>
+                    <th colspan="4"> Register Patient Portal Account</th>
+                </tr>
+                <!--patient's information section starts here-->
+
+                <tr> <!--Patient enters First Name-->
+                    <td class="td1"><label for="fname">First Name:</label></td>
                     <td>
                         <input
-                            type="text"
-                            id="fname"
-                            name="fname"
-                            maxlength="30"
-                            required>
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        maxlength="30"
+                        required
+                        title="Please enter your first name"
+                        placeholder="John">
                     </td>
                 </tr>
-                <tr> <!-- Middle Initial-->
-                    <td class="align-right"><label for="minitial">Middle Initial:</label></td>
+
+                <tr><!--Patient enters middle initial-->
+                    <td class="td1"><label for="mini">Middle Initial:</label></td>
                     <td>
                         <input
-                            type="text"
-                            id="minitial"
-                            name="minitial"
-                            maxlength="1"
-                            size="1">
+                        type="text"
+                        id="mini"
+                        name="mini"
+                        maxlength="1"
+                        title="Please enter your middle initial"
+                        placeholder="D">
                     </td>
                 </tr>
-                <tr> <!-- Last Name-->
-                    <td class="align-right"><label for="lname">Last Name:</label></td>
+
+                <tr> <!--Patient enters last name-->
+                    <td class="td1"><label for="lname">Last Name:</label></td>
                     <td>
                         <input
-                            type="text"
-                            id="lname"
-                            name="lname"
-                            maxlength="30"
-                            required>
-                    </td>
-                </tr>
-                <tr> <!-- Date of Birth-->
-                    <td class="align-right"><label for="dob">Date of Birth:</label></td>
-                    <td>
-                        <input type="date"
-                            id="dob"
-                            name="dob"
-                            required>
-                    </td>
-                <tr> <!--Gender Radio Buttons-->
-                        <td class="align-right"><label for="gender">Gender:</label></td>
-                        <td required>
-                            <input type="radio" id="g1" name="gender" value="Male"> Male
-                            <input type="radio" id="g2" name="gender" value="Female"> Female
-                            <input type="radio" id="g3" name="gender" value="Other"> Other
-                        </td>
-                </tr>
-                <tr> <!--SSN-->
-                    <td class="align-right"><label for="ssn">SSN:</label></td>
-                    <td>
-                        <input
-                            type="password"
-                            id="ssn"
-                            name="ssn"
-                            required placeholder="XXX-XX-XXXX"
-                            maxlength="9"
-                            required>
-                    </td>
-                </tr>
-                <tr><!--address 1-->
-                    <td class="align-right" ><label for="address1"> Primary Address</label></td>
-                    <td>
-                        <input type="text" 
-                            id="address1" 
-                            name="address1"
-                            maxlength="30"
-                            required>
-                    </td>
-                </tr>
-                <tr><!--address 2-->
-                    <td class="align-right"><label for="address2">Secondary Address</label></td>
-                    <td>
-                        <input
-                            type="text"
-                            id="address2"
-                            name="address2"
-                            maxlength="30"
-                            placeholder="Optional">
-                    </td>
-                </tr>
-                <tr> <!-- Phone Number-->
-                    <td class="align-right"><label for="phone">Phone Number:</label></td>
-                    <td>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                            placeholder="XXX-XXX-XXXX"
-                            maxlength="12"
-                            required>
-                    </td>
-                </tr>
-                <tr class="address-row"> <!--City-->
-                    <td class="align-right"><label for="city">City:</label></td>
-                    <td>
-                        <input
-                            type="text"
-                            id="city"
-                            name="city"
-                            maxlength="30"
-                            required>
-                    </td>
-                </tr>
-                    <tr><!--State-->
-                    <td class="align-right"><label for="state">State:</label></td> 
-                    <td> 
-                        <select id="state"
-                        name="state"
+                        type="text"
+                        id="lname"
+                        name="lname"
+                        maxlength="30"
+                        title="Please enter your last name"
+                        placeholder="Smith"
                         required>
+                    </td>
+                </tr>
+                
+                <tr> <!--Patient enters DOB-->
+                    <td class="td1"><label for="dob">Date of Birth:</label></td>
+                    <td>
+                        <input
+                        type="text"
+                        id="dob"
+                        name="dob"
+                        maxlength="30"
+                        title="Please enter your Date of Birth"
+                        placeholder="MNM/DD/YYYY"
+                        required>
+                    </td>
+                </tr>
+
+                <tr> <!--Patient selects their Gender-->
+                    <td class="td1"><label for="gender">Gender:</label></td>
+                    <td>
+                        <input
+                        type="radio"
+                        id="g1"
+                        name="gender"
+                        value="Male">
+                        Male
+
+                        <input
+                        type="radio"
+                        id="g2"
+                        name="gender"
+                        value="Female">
+                        Female
+
+                        <input
+                        type="radio"
+                        id="g3"
+                        name="gender"
+                        value="Other">
+                        Other
+                    </td>
+                </tr>
+
+                <tr> <!--Patient's SSN-->
+                    <td class="td1"><label for="ssn">Social Security Number:</label></td>
+                    <td>
+                        <input
+                        type="password"
+                        id="ssn"
+                        name="ssn"
+                        minlength="11"
+                        maxlength="11"
+                        title="Please enter your SSN."
+                        placeholder="XXX-XX-XXXX"
+                        required>
+                    </td>
+                </tr>
+                <tr> <!--line divider-->
+                    <th colspan="4"><hr></th>
+                </tr>
+                <tr> <!--Patient's Contact Information-->
+                    <th colspan="4"> Patient's Contact Information</th>
+                </tr>
+
+                <tr> <!--Patient's Primary Address-->
+                    <td class="td1"><label for="address1">Primary Address:</label></td>
+                    <td>
+                        <input
+                        type="text"
+                        id="address1"
+                        name="address1"
+                        minlength="1"
+                        maxlength="30"
+                        title="Please enter your primary address."
+                        placeholder="1234 Main St."
+                        required>
+                    </td>   
+                </tr>
+
+                <tr> <!--Patient's Secondary Address-->
+                    <td class="td1"><label for="address2">Secondary Address:</label></td>
+                    <td>
+                        <input
+                        type="text"
+                        id="address2"
+                        name="address2"
+                        minlength="1"
+                        maxlength="30"
+                        title="Please enter your address."
+                        placeholder="Optional">
+                    </td>   
+                </tr>
+
+                <tr> <!--Patient's City-->
+                    <td class="td1"><label for="city">City:</label></td>
+                    <td>
+                        <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        minlength="1"
+                        maxlength="30"
+                        title="Please enter your city."
+                        placeholder="Houston"
+                        required>
+                    </td>
+                </tr>
+
+                <tr> <!--Patient's State-->
+                    <td class="td1"><label for="state">State:</label></td>
+                    <td>
+                        <select 
+                            id="state" 
+                            name="state"
+                            title="Please select your State."
+                            required>
                             <option selected disabled>Please Select One...</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
+                            <option value="AS">American Samoa</option>
                             <option value="AZ">Arizona</option>
                             <option value="AR">Arkansas</option>
                             <option value="CA">California</option>
                             <option value="CO">Colorado</option>
                             <option value="CT">Connecticut</option>
                             <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
                             <option value="FL">Florida</option>
                             <option value="GA">Georgia</option>
+                            <option value="GU">Guam</option>
                             <option value="HI">Hawaii</option>
                             <option value="ID">Idaho</option>
                             <option value="IL">Illinois</option>
@@ -188,10 +239,12 @@
                             <option value="NY">New York</option>
                             <option value="NC">North Carolina</option>
                             <option value="ND">North Dakota</option>
+                            <option value="MP">Northern Mariana Islands</option>
                             <option value="OH">Ohio</option>
                             <option value="OK">Oklahoma</option>
                             <option value="OR">Oregon</option>
                             <option value="PA">Pennsylvania</option>
+                            <option value="PR">Puerto Rico</option>
                             <option value="RI">Rhode Island</option>
                             <option value="SC">South Carolina</option>
                             <option value="SD">South Dakota</option>
@@ -200,147 +253,188 @@
                             <option value="UT">Utah</option>
                             <option value="VT">Vermont</option>
                             <option value="VA">Virginia</option>
+                            <option value="VI">U.S. Virgin Islands</option>
                             <option value="WA">Washington</option>
                             <option value="WV">West Virginia</option>
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
-                        </select>
+                        </select>   
                     </td>
                 </tr>
-                <tr> <!--Zipcode-->   
-                    <td class="align-right"><label for="zip">Zipcode:</label></td>
+
+                <tr> <!--Patient's Zipcode-->
+                    <td class="td1"><label for="zip">Zipcode:</label></td>
                     <td>
                         <input
-                            type="text"
-                            id="zip"
-                            name="zip"
-                            pattern="[0-9]{5}"
-                            maxlength="5"
-                            required>
+                        type="text"
+                        id="zip"
+                        name="zip"
+                        pattern="[0-9]{5}"
+                        maxlength="5"
+                        title="Please enter your zipcode."
+                        required>
                     </td>
                 </tr>
-                <tr> <!--Email-->
-                    <td class="align-right"><label for="email">Email:</label></td>
+
+                <tr> <!--Patient's Email-->
+                    <td class="td1"><label for="email">Email:</label></td>
                     <td>
                         <input
-                            type="text"
-                            id="email"
-                            name="email"
-                            maxlength="40"
-                            placeholder="name@domain.com"
-                            required>
+                        type="text"
+                        id="email"
+                        name="email"
+                        maxlength="30"
+                        title="Please enter your Email."
+                        placeholder="user@domain.com"
+                        required>
                     </td>
                 </tr>
-                <tr> <!--Slider Rating health 1-10-->
-                    <td class="align-right"><label for="health">Rate How You're Feeling:</label></td>
+
+                <tr> <!--Patient's Phone Number-->
+                    <td class="td1"><label for="phonenum">Phone Number:</label></td>
                     <td>
                         <input
-                            type="range"
-                            id="health"
-                            name="health"
-                            default="0"
-                            min="1"
-                            max="10"
-                            required>
+                        type="text"
+                        id="phonenum"
+                        name="phonenum"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        maxlength="12"
+                        title="Please enter your phone number."
+                        placeholder="XXX-XXX-XXXX"
+                        required>
                     </td>
                 </tr>
-                <tr> <!--Symptom History-->
-                    <td class="align-right"><label for="history"></label></td>
+
+                <tr> 
+                    <th colspan="4"><hr></th>
+                </tr>
+                <tr> <!--Patient's Medical History-->
+                    <th colspan="4"> Medical History</th>
+                </tr>
+
+                <tr> <!--Patient's Medical History (Checkboxes)-->
+                    <td class="td1"><label for="patient_history">Have you ever had/are <br>you currently experiencing...</label></td>
                     <td>
-                        <div class="medical-history"> <!--Style medical history reference-->
-                            <label for="history">Medical History:</label><br>
-                            <input type="checkbox" id="s1" value="Chicken Pox"> Chicken Pox <br>
-                            <input type="checkbox" id="s2" value="Measles"> Measles <br>
-                            <input type="checkbox" id="s3" value="Covid-19"> Covid-19 <br>
-                            <input type="checkbox" id="s4" value="Small Pox"> Small Pox <br>
-                            <input type="checkbox" id="s5" value="Tetatnus"> Tetanus <br>
-                            <input type="checkbox" id="s6" value="Other">Other
-                        </div>
+                        <input type="checkbox" id="poption1" value="Chickenpox">
+                        <label for="Chickenpox">Chickenpox</label><br>
+
+                        <input type="checkbox" id="poption2" value="Measles">
+                        <label for="Measles">Measles</label><br>
+
+                        <input type="checkbox" id="poption3" value="Covid-19">
+                        <label for="Covid-19">Covid-19</label><br>
+
+                        <input type="checkbox" id="poption4" value="Small Pox">
+                        <label for="Small Pox">Small Pox</label><br>
+
+                        <input type="checkbox" id="poption5" value="Tetanus">
+                        <label for="Tetanus">Tetanus</label><br>
+
+                        <input type="checkbox" id="poption6" value="Other">
+                        <label for="Other">Other</label><br>    
                     </td>
                 </tr>
-                <tr> <!--Symptom description-->
-                    <td class="align-right"><label for="symptoms">Please list/describe your symptoms.</label></td>
+
+                <tr> <!-- Patient Medicl Notes-->
+                    <td class="td1" halign="right">
+                        <label for="notes">If you selected any of the <br>above, please explain:</label>
+                    </td>
                     <td>
                         <textarea
-                            id="symptoms"
-                            name="symptoms"
-                            rows="3"
-                            cols="50"
-                            maxlength="400"
-                            placeholder="If none type 'N/A'"
-                            required></textarea>
-                        </td>   
-                </tr>
-                <tr> <!--vaccines-->
-                    <td class="align-right"><label for="vaccines">Have you had any vaccinations?</label></td>
-                    <td>
-                        <input type="radio"id="vaccines1" name="vaccines"value="Yes"> Yes 
-                        <input type="radio" id="vaccines2" name="vaccines" value="No"> No
-                        <input type="radio" id="vaccines3" name="vaccines" value="Unsure"> Unsure  
+                        id="notes"
+                        name="notes"
+                        maxlength="500"
+                        rows="5"
+                        cols="35"
+                        title="Please briefly explain your medical history."
+                        placeholder="Insert Text Here..."></textarea>
+                        <span id="medical_notes"></span>
                     </td>
                 </tr>
-                <tr> <!--Insurance -->
-                    <td class="align-right"><label for="insurance">Do you have insurance?</label></td>
-                    <td>
-                        <input type="radio"id="insurance1" name="insurance" value="Yes"> Yes 
-                        <input type="radio" id="insurance2" name="insurance" value="No"> No
-                        <input type="radio" id="insurance3" name="insurance" value="Unsure"> Unsure  
-                    </td>
-                </tr>
-                <tr> <!--Insurance Provider-->
-                    <td class="align-right"><label for="insuranceProvider">Insurance Provider:</label></td>
+
+                <!--Patient Urgency, Slider/Range-->
+                <tr>
+                    <td class="td1"><label for="slider">On a scale of 1-10, how urgent is your medical need?</label></td>
                     <td>
                         <input
+                        type="range"
+                        id="slider"
+                        name="slider"
+                        min="1"
+                        max="10"
+                        value="1"
+                        title="Please select a number between 1-10."
+                        required>
+                        <span id="slider-range"></span>  
+                </tr>
+
+                <tr> <!--line divider-->
+                    <th colspan="4"><hr></th>
+                </tr>
+
+                <tr> <!--Patient Login Sign-Up/Registration Section-->
+                    <th colspan="4"> Complete Registering Your Account</th>
+
+                    <tr> <!--Patient enters Username-->
+                        <td class="td1"><label for="uname">Username:</label></td>
+                        <td>
+                            <input
                             type="text"
-                            id="insuranceProvider"
-                            name="insuranceProvider"
+                            id="uname"
+                            name="uname"
+                            maxlength="15"
+                            required
+                            title="Please enter a Username."
+                            placeholder="User1234">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1"><label for="pword">Password:</label></td>
+                        <td>
+                            <input
+                            type="password"
+                            id="pword"
+                            name="pword"
+                            minlength="10"
                             maxlength="30"
-                            placeholder="If none type 'N/A'">
-                    </td>
-                </tr>
-        </div>
-    </section>
-    </section>
-        <div class="login"> <!--Styling for login section-->
-            <table>
-                <tr> <!--Create User Login Header-->
-                    <th colspan="4" class="align-center">Create User Login</th> <!--Create User Login-->
-                </tr>
-                <tr> <!--Username-->
-                    <td class="align-right"><label for="username">Username:</label></td>
-                    <td>
-                        <input type="text"
-                            id="username"
-                            name="username"
+                            required
+                            title="Please enter a password."
+                            placeholder="Required">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="td1"><label for="con_pword">Password:</label></td>
+                        <td>
+                            <input
+                            type="password"
+                            id="con_pword"
+                            name="con_pword" 
+                            minlength="10"
                             maxlength="30"
-                            pattern="[A-Za-z]+[A-Za-z0-9-_]{8,}"
-                            placeholder="Do not use your real name"
-                            required>
-                    </td>
-                </tr>
-                <tr> <!--Password-->
-                    <td class="align-right"><label for="password">Password:</label></td>
-                    <td>
-                        <input type="password"
-                            id="password"
-                            name="password"
-                            minlength="12"
-                            maxlength="30"
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            placeholder="Must be at least 12 characters"
-                            required>
-                    </td>
-                </tr>
-                <tr> <!--Submit & Reset Button-->
-                    <td colspan="4" class="align-center">
-                            <input type="submit" name="submit">
-                            <input type="reset" name="reset">
-                    </td>
-                </tr>
+                            required
+                            title="Please re-enter your password."
+                            placeholder="Required">
+                        </td>
+                    </tr>
+
+                    <tr> <!--Submit Button-->
+                        <td class="td1">
+                                <input type="submit" id="submit" value="Submit">
+
+                                <input type="reset" id="reset" value="Reset">
+                        </td>
+                    </tr>
             </table>
-            <footer class="Contact"> <!--INteractive Footer-->
-                <p>&#169; Heights Top Medical Location: <a href="contact.html">Contact Us!</a></p>
-            </footer>
         </div>
-    <section>  
+</form>
+<!--footer-->
+<footer>
+    <p id="footer">&#169; 2025 Height's Top Medical Location | <a href="contact.html">Contact Us!</a></p>
+</footer>
+
+<script src="hw2.js"></script> <!--links to js file-->
+    </body>
 </html>
+
