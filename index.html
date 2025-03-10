@@ -32,14 +32,14 @@
                     </td>
                         <!--Displays today's Date-->
                     <td valign="botton" halign="right" width="20%">
-                        <p>Today's Date: <span id="today"   ></span></p>
+                        <p>Today's Date: <span id="today"></span></p>
                     </td>
                 </tr>
             </table>
-        </header>
+        </header>       
 <hr>
 <!--Form start point-->
-<form action="thankyou.html">
+<form name="signup" id="signup" action="thankyou.html">
         <div class="format">
             <table>
                 <tr>
@@ -62,7 +62,7 @@
                         placeholder="John">
 
                         <br>
-                        <span class="error" id="fname_error"></span>
+                        <span class="error" id="fname-error"></span>
                     </td>
                 </tr>
 
@@ -80,7 +80,7 @@
                         placeholder="D">
 
                         <br>
-                        <span class="error" id="mini_error"></span>
+                        <span class="error" id="mini-error"></span>
                     </td>
                 </tr>
 
@@ -99,7 +99,7 @@
                         required>
 
                         <br>
-                        <span class="error" id="lname_error"></span>
+                        <span class="error" id="lname-error"></span>
                     </td>
                 </tr>
                 
@@ -114,7 +114,7 @@
                             required>
 
                             <br>
-                        <span class="error" id="dob_error"></span>
+                        <span class="error" id="dob-error"></span>
                     </td>
                 </tr>
 
@@ -159,7 +159,7 @@
                         required>
 
                         <br>
-                        <span class="error" id="ssn_error"></span>
+                        <span class="error" id="ssn-error"></span>
                     </td>
                 </tr>
                 <tr> <!--line divider-->
@@ -184,7 +184,7 @@
                         required>
 
                         <br>
-                        <span class="error" id="address1_error"></span>
+                        <span class="error" id="address1-error"></span>
                     </td>   
                 </tr>
 
@@ -202,7 +202,7 @@
                         placeholder="Optional">
 
                         <br>
-                        <span class="error" id="address2_error"></span>
+                        <span class="error" id="address2-error"></span>
                     </td>   
                 </tr>
 
@@ -300,10 +300,11 @@
                         pattern="[0-9]{5}"
                         maxlength="5"
                         title="Numbers Only."
+                        onblur="validateZip()"
                         required>
 
                         <br>
-                        <span class="error" id="zip_error"></span>
+                        <span class="error" id="zip-error"></span>
                     </td>
                 </tr>
 
@@ -322,7 +323,7 @@
                         required>
 
                         <br>
-                        <span class="error" id="email_error"></span>
+                        <span class="error" id="email-error"></span>
                     </td>
                 </tr>
 
@@ -341,7 +342,7 @@
                         required>
 
                         <br>
-                        <span class="error" id="phonenum_error"></span>
+                        <span class="error" id="phonenum-error"></span>
                     </td>
                 </tr>
 
@@ -423,14 +424,14 @@
                             id="uname"
                             name="uname"
                             minlength="5"
-                            maxlength="15"
+                            maxlength="30"
                             required
                             title="Please enter a Username. Must contain at least 5 characters."
                             onblur="validateUname()"
                             placeholder="User1234">
 
                             <br>
-                            <span class="error" id="uname_error"></span>
+                            <span class="error" id="uname-error"></span>
                         </td>
                     </tr>
 
@@ -450,12 +451,12 @@
                             onfocus="validatePword()"
                             placeholder="Required">
                             <br>
-                            <span class="error" id="pword_error"></span>
+                            <span class="error" id="pword-error"></span>
                         </td>
                     </tr>
 
                     <tr> <!--Patient re-enters password-->
-                        <td class="td1"><label for="con_pword">Password:</label></td>
+                        <td class="td1"><label for="con_pword">Re-Type Password:</label></td>
                         <td>
                             <input
                             type="password"
@@ -470,21 +471,36 @@
                             onfocus="validateConPword()"
                             placeholder="Required">
                             <br>
-                            <span class="error" id="con_pword_error"></span>
+                            <span class="error" id="con_pword-error"></span>
                         </td>
                     </tr>
 
                     <tr> <!--Submit Button-->
                         <td class="td1">
-                                <input type="submit" id="submit" value="Submit">
+                            <input type="submit" id="submit" value="Submit">
 
-                                <input type="reset" id="reset" value="Reset">
+                            <input type="reset" id="reset" value="Reset">
 
-                                <input type="button" id="review" name="review" value="Review">
+                            <input type="button" id="review" name="review" value="Review" onclick="reviewInput()">
                         </td>
                     </tr>
             </table>
         </div>
+
+    <div class="pword-message">
+        <span id="msg1"></span><br>
+        <span id="msg2"></span><br>
+        <span id="msg3"></span><br>
+        <span id="msg4"></span><br> 
+        <span id="msg5"></span><br>
+        <span id="msg6"></span><br>
+        <span id="msg7"></span><br>
+        <span id="pword2-error"></span><br>
+    </div>
+        <div>
+            <p id="showInput"></p>
+        </div>
+
 </form>
 <!--footer-->
 <footer>

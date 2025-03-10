@@ -3,9 +3,9 @@ Name: Peter Nguyen
 
     File: hw2.css
     Date Created: February 20, 2025
-    Date Updated: 2/9/2025 2:26 AM
-    Version: 1.0
-    Purpose: MIS 3371 Web Development Project HW 2.. Patient Registration Form 😊
+    Date Updated: 3/9/2025 2:26 AM
+    Version: 2.1
+        Purpose: MIS 3371 Web Development Project HW 2.. Patient Registration Form 😊
     */
 
 header { /* adjust the header section */
@@ -109,4 +109,48 @@ p {
     font-family: "Copperplate", "Copperplate Gothic Light", fantasy;
     font-weight: bold;
     margin-right: 5px;
+}
+
+.class error {
+    color: red;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+pword-message {
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    position: relative;
+    left: 100px;
+    background: transparent;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: red;
+}
+
+#review {
+    margin-top: 5px;
+
+}
+
+table.ouput
+tr.output
+td.output {
+    width: 500px;
+    background-color:  #ccd5ae;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;
+    color: black;
+}
+
+td.output    {
+    width: 500px;
+    background-color:  #ccd5ae;
+    padding: 10px;
+    border-spacing: 2px;
+    border-radius: 20px;    
 }
