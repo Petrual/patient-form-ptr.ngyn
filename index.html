@@ -2,13 +2,13 @@
 <!--
     File: index.html
     Date Created: February 20, 2025
-    Date Updated: 3/7/2025 4:16 PM
-    Version: 1.1
+    Date Updated: 4/12/2025 8:55 AM
+    Version: 3.0
     Purpose: MIS 3371 Web Development Project HW 2 ... Patient Registration Form 😊
 -->
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="hw2.css"> <!--links to css file-->
+        <link rel="stylesheet" href="hw3.css"> <!--links to css file-->
 
     <!-- displays text in browser-->
         <title>New Patient Registration Form | Height's Top Medical Location</title>
@@ -154,6 +154,7 @@
                         minlength="11"
                         maxlength="11"
                         title="Numbers Only"
+                        oninput="formatSSN()"
                         onblur="validateSsn()"
                         placeholder="XXX-XX-XXXX"
                         required>
@@ -217,7 +218,11 @@
                         maxlength="30"
                         title="Please enter your city."
                         placeholder="Houston"
+                        onblur="validateCity()"
                         required>
+
+                        <br>
+                        <span class="error" id="city-error"></span>
                     </td>
                 </tr>
 
@@ -318,8 +323,7 @@
                         maxlength="30"
                         title="Please enter your Email."
                         placeholder="user@domain.com"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$"
-                        onblur="validateEmail()" 
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$" 
                         required>
 
                         <br>
@@ -378,12 +382,12 @@
 
                 <tr> <!-- Patient Medicl Notes-->
                     <td class="td1" halign="right">
-                        <label for="notes">If you selected any of the <br>above, please explain:</label>
+                        <label for="med-notes">If you selected any of the <br>above, please explain:</label>
                     </td>
                     <td>
                         <textarea
-                        id="notes"
-                        name="notes"
+                        id="med-notes"
+                        name="med-notes"
                         maxlength="500"
                         rows="5"
                         cols="35"
@@ -435,7 +439,7 @@
                         </td>
                     </tr>
 
-                    <tr> <!-- patient enters a password-->
+                    <tr> <!--Patient enters a password-->
                         <td class="td1"><label for="pword">Password:</label></td>
                         <td>
                             <input
@@ -454,7 +458,21 @@
                             <span class="error" id="pword-error"></span>
                         </td>
                     </tr>
-
+                    
+                    <tr> <!--Password error messages-->
+                        <td colspan="2">
+                            <div class="pword-message">
+                                <span class="error" id="msg1"></span>
+                                <span class="error" id="msg2"></span>
+                                <span class="error" id="msg3"></span>
+                                <span class="error" id="msg4"></span>
+                                <span class="error" id="msg5"></span>
+                                <span class="error" id="msg6"></span>
+                                <span class="error" id="msg7"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    
                     <tr> <!--Patient re-enters password-->
                         <td class="td1"><label for="con_pword">Re-Type Password:</label></td>
                         <td>
@@ -466,28 +484,16 @@
                             maxlength="30"
                             required
                             title="Please re-enter your password."
-                            onblur="validateConPword()"
-                            oninput="validateConPword()"
-                            onfocus="validateConPword()"
                             placeholder="Required">
                             <br>
                             <span class="error" id="con_pword-error"></span>
                         </td>
                     </tr>
-
-                    <tr> <!--Submit Button-->
-                        <td class="td1">
-                            <input type="submit" id="submit" value="Submit">
-
-                            <input type="reset" id="reset" value="Reset">
-
-                            <input type="button" id="review" name="review" value="Review" onclick="reviewInput()">
-                        </td>
-                    </tr>
+                </tr>
             </table>
         </div>
 
-    <div class="pword-message">
+    <div class="pword-message"> 
         <span id="msg1"></span><br>
         <span id="msg2"></span><br>
         <span id="msg3"></span><br>
@@ -501,13 +507,33 @@
             <p id="showInput"></p>
         </div>
 
+
+    <div class="button-container">
+        <input type="submit" id="submit" value="Submit">
+        <!--Reset button-->
+        <input type="reset" id="reset" value="Reset" > 
+        <!--Review button-->
+        <input type="button" id="review" name="review" value="Review" onclick="reviewInput()"> 
+        <!--Validate button-->
+        <input type="button" id="validate" name="validate" value="Validate" onclick="validateInput()">
+    </div>
+
 </form>
 <!--footer-->
 <footer>
     <p id="footer">&#169; 2025 Height's Top Medical Location | <a href="contact.html">Contact Us!</a></p>
 </footer>
 
-<script src="hw2.js"></script> <!--links to js file-->
+<script src="hw3.js"></script> <!--links to js file-->
+
+<!-- inserts Alert Box into form-->
+<div id="alert-box">
+    <div id="alert-content">
+        <h4>Please fill out all required information.</h4>
+        <button id="close-alert">Ok</button>
+    </div>
+</div>
+
     </body>
 </html>
 
