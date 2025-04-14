@@ -71,7 +71,7 @@ footer { /* styling for footer section */
     background-color: #ccd5ae;
     height: 2.5 rem;
 }
-
+/* styling for footer */
 #footer {
     text-align: right;
     font-family: "Times New Roman", Times, serif;
@@ -119,7 +119,7 @@ p {
     margin-top: 5px;
     display: block; /* error message will display on its own line */
 }
-/* Styling for the password error messages */
+/* Styling for the password error message container */
 .pword-message {
     margin-top: 5px;
     padding: 5px;
@@ -128,7 +128,7 @@ p {
     border-radius: 5px;
     display: none;
 }
-
+/* styling for pword text */
 .pword-message .error {
     text-align: center;
     color: red;
@@ -149,7 +149,7 @@ p {
     display: block; 
 }
 
-#review 
+#review  /* styling for review */
 {
     margin-top: 5px;
 
