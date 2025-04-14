@@ -209,16 +209,16 @@ function validateEmail() {
 // js to attachEventListeners to form fields
 function attachEventListeners() {
 
-    // Email validation listeners
+    // Email validation listeners, allows for dynamic changes to error messages of email
     var emailInput = document.getElementById("email");
     emailInput.addEventListener("input", validateEmail);
     emailInput.addEventListener("blur", validateEmail);
 
-    // Phone number validation listeners
+    // Phone number validation listeners, allows for dynamic changes to phone number
     var phoneInput = document.getElementById("phonenum");
     phoneInput.addEventListener("blur", validatePhonenum);
 
-    // Confirmation password validation listeners
+    // Confirmation password validation listeners, allows for dynamic changes of error messages appearing and disappearing.
     var conPwordInput = document.getElementById("con_pword");
     conPwordInput.addEventListener("blur", validateConPword);
     conPwordInput.addEventListener("input", validateConPword);
@@ -417,7 +417,7 @@ function reviewInput() {
     document.getElementById("showInput").innerHTML = formoutput;
 }
 
-// remove review data
+// remove review data upon new requests
 function removeReview() {
     document.getElementById("showInput").innerHTML = "";
 }
@@ -435,7 +435,7 @@ function showAlert(errorMessages) {
     errorMessages.forEach((message) => {
         const errorElement = document.createElement("p");
         errorElement.textContent = message;
-        errorElement.style.color = "red"; // Style the error messages
+        errorElement.style.color = "red"; // may be redundant but styling in css left it unaffected and text was black.
         alertContent.appendChild(errorElement);
     });
 
@@ -451,21 +451,21 @@ function showAlert(errorMessages) {
 
     alertBox.style.display = "block"; // Show the alert box
 }
-
+// function to make sure all field inputs are valid (not empty, meet all parameters, etc.)
 function validateInput() {
     let valid = true;
     const errorMessages = [];
 
     // Call each validation function and collect error messages
-    if (!validateFname()) {
+    if (!validateFname()) { // checks first name is filled and meets all required parameters
         errorMessages.push("First name is invalid.");
         valid = false;
     }
-    if (!validateMini()) {
+    if (!validateMini()) { // checks if MINI is filled and meets all required parameters (optional to be filled)
         errorMessages.push("Middle initial is invalid.");
         valid = false;
     }
-    if (!validateLname()) {
+    if (!validateLname()) { // checks Last Name is filled and meets all required parameters
         errorMessages.push("Last name is invalid.");
         valid = false;
     }
@@ -473,7 +473,7 @@ function validateInput() {
         errorMessages.push("Date of birth is invalid.");
         valid = false;
     }
-    if (!validateSsn()) {
+    if (!validateSsn()) { // checks SSN is filled and meets all required parameters
         errorMessages.push("Social Security Number is invalid.");
         valid = false;
     }
@@ -481,27 +481,27 @@ function validateInput() {
         errorMessages.push("Primary address is invalid.");
         valid = false;
     }
-    if (!validateCity()) {
+    if (!validateCity()) { // checks city is filled and meets all required parameters
         errorMessages.push("City is invalid.");
         valid = false;
     }
-    if (!validateZip()) {
+    if (!validateZip()) {  // checks zipcode is filled and meets all required parameters
         errorMessages.push("Zipcode is invalid.");
         valid = false;
     }
-    if (!validateEmail()) {
+    if (!validateEmail()) { //checks that phone number is filled and meets all required parameters
         errorMessages.push("Email is invalid.");
         valid = false;
     }
-    if (!validatePhonenum()) {
+    if (!validatePhonenum()) { //validates phonenumber
         errorMessages.push("Phone number is invalid.");
         valid = false;
     }
-    if (!validateUname()) {
+    if (!validateUname()) { //validates the username
         errorMessages.push("Username is invalid.");
         valid = false;
     }
-    if (!validatePword()) {
+    if (!validatePword()) { //validates the password
         errorMessages.push("Password is invalid.");
         valid = false;
     }
