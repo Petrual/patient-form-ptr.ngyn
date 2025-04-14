@@ -1,12 +1,10 @@
 /*
-Name: Peter Nguyen
-
-    File: hw3.js
     Name: Peter Nguyen
+    File: hw3.js
     Date Created: January 28, 2025
-    Date Updated: 4/12/2025 8:55 AM
-    Version: 2.1
-    Purpose: MIS 3371 Web Development Project HW 2 (JS) ... Patient Registration Form 😊
+    Date Updated: 4/13/2025 7:20 PM
+    Version: 3.1
+    Purpose: MIS 3371 Web Development Project HW 3(JS) ... Patient Registration Form 😊
     */
 
 //dyanmic date//
