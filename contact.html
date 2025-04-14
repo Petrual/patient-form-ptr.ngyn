@@ -2,8 +2,56 @@
 <!--
     File: contact.html
     Date Created: February 20, 2025
-    Date Updated: 3/7/2025 4:16 PM
-    Version: 1.1
-    Purpose: MIS 3371 Web Development Project HW 2 ... Patient Registration Form 😊
+    Date Updated: 4/13/2025 9:45 AM
+    Version: 1.2
+    Purpose: MIS 3371 Web Development Project HW 3 ... Patient Registration Form 😊
 -->
 <html lang="en">
+    <head>
+        <link rel="stylesheet" href="hw3.css"> <!-- Links to the CSS file -->
+        <title>Contact Us</title>
+    </head>
+    <body>
+        <header>
+            <table width="100%">
+                <tr>
+                    <td valign="top" halign="left" width="20%"> <!-- Clinic Logo -->
+                        <div class="image">
+                            <img halign="center" 
+                            src="hospital.png" 
+                            alt="Height's Top Medical Location Logo" 
+                            width="160px" 
+                            id="logo">
+                        </div>
+                    </td>
+
+                    <td class="title-header"> <!-- Header -->
+                        <h2>Height's Top Medical Location</h2>
+                    </td>
+                    <td valign="bottom" halign="right" width="20%"> <!-- Today's Date -->
+                        <p>Today's Date: <span id="today"></span></p>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <hr>
+        <!-- Contact Information -->
+        <main>
+            <h1>Contact Us</h1>
+            <p>If you have any questions or concerns, please feel free to reach out to us using the information below:</p>
+            <ul>
+                <hr><strong>Phone:</strong> (123) 456-7890</hr>
+                <hr><strong>Email:</strong> contact@heightstopmedical.com</hr>
+                <hr><strong>Address:</strong> 1234 Main St., Houston, TX 77001</hr>
+                <hr><strong>Office Hours:</strong> Monday - Friday, 8:00 AM - 5:00 PM</hr>
+            </ul>
+        </main>
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <p id="footer">&#169; 2025 Height's Top Medical Location | <a href="index.html">Return to Patient Form</a></p>
+        </footer>
+
+        <script src="hw3.js"></script> <!-- Links to the JavaScript file -->
+    </body>
+</html>
