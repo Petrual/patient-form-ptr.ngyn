@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <!--
-    File: index.html / hw3.html
+    File: index.html / hw4.html
     Date Created: January 28, 2025
-    Date Updated: 4/13/2025 7:20 PM
-    Version: 3.1
-    Purpose: MIS 3371 Web Development Project HW 3 ... Patient Registration Form 😊
+    Date Updated: 4/30/2025 2:30 PM
+    Version: 4.1
+    Purpose: MIS 3371 Web Development Project HW 4 ... Patient Registration Form 😊
 -->
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="hw3.css"> <!--links to css file-->
+        <link rel="stylesheet" href="hw4.css"> <!--links to css file-->
 
     <!-- displays text in browser-->
         <title>New Patient Registration Form | Height's Top Medical Location</title>
@@ -26,7 +26,7 @@
                             id="logo">
                         </div>
                     </td>
-
+                        
                     <td class="title-header"> <!--Header-->
                         <h2>Height's Top Medical Location</h2>
                     </td>
@@ -38,6 +38,15 @@
             </table>
         </header>       
 <hr>
+<!-- inserts welcome message for returning or "new user" if applicabe-->
+<center>
+    <span id="welcome1"></span>
+    <span id="welcome2"></span>
+</center>
+<div class="iframe-container">
+    <iframe class = "frame" src="https://chromedino.com/" frameborder="0"></iframe>
+</div>
+
 <!--Form start point-->
 <form name="signup" id="signup" action="thankyou.html">
         <div class="format">
@@ -489,6 +498,20 @@
                             <span class="error" id="con_pword-error"></span>
                         </td>
                     </tr>
+                    <!-- remember me button-->
+                    <tr>
+                        <td class="td1">
+                            <label for="remember-me">Remember Me:</label>
+                        </td>
+                        <td>
+                            <input
+                                type="checkbox"
+                                id="remember-me"
+                                name="remember-me"
+                                checked
+                            />
+                        </td>
+                    </tr>
                 </tr>
             </table>
         </div>
@@ -517,14 +540,13 @@
         <!--Validate button-->
         <input type="button" id="validate" name="validate" value="Validate" onclick="validateInput()">
     </div>
+    
 
 </form>
-<!--footer-->
-<footer>
-    <p id="footer">&#169; 2025 Height's Top Medical Location | <a href="contact.html">Contact Us!</a></p>
-</footer>
+<!--iframe footer that contains website link-->
+<iframe src="footer.html" width="100%" height="100%" frameborder="0" title="footer"></iframe>
 
-<script src="hw3.js"></script> <!--links to js file-->
+<script src="hw4.js"></script> <!--links to js file-->
 
 <!-- inserts Alert Box into form-->
 <div id="alert-box">
